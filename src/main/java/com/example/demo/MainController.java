@@ -20,8 +20,9 @@ public class MainController {
 
 
         @RequestMapping("/")
-        public String Home(Model model) {
+        public String Home(Model model /*,String login*/) {
             model.addAttribute("users",userRepository.findAll());
+            //model.addAttribute("counter",userRepository.countByLogin(login));
 //user's count
             return "homepage";
         }

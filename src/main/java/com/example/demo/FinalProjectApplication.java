@@ -38,14 +38,60 @@ public class FinalProjectApplication {
         return args -> {
 
 
-//            User user = restTemplate.getForObject("https://api.github.com/users/MelakMinlargilih", User.class);
-//            log.info(user.toString());
-//            userRepository.save(user);};
-        User user1 = restTemplate.getForObject("https://api.github.com/users/Ermiji", User.class);
-        log.info(user1.toString());
-        userRepository.save(user1);};
-//            log.info("----------------------------------------------------");
-//
+            User user1 = restTemplate.getForObject("https://api.github.com/users/AbezerZergaw", User.class);
+            // log.info(user.toString());
+            userRepository.save(user1);
+            User user2 = restTemplate.getForObject("https://api.github.com/users/bilu-Blen", User.class);
+//        log.info(user.toString());
+            userRepository.save(user2);
+
+            User user3 = restTemplate.getForObject("https://api.github.com/users/Ermiji", User.class);
+//        log.info(user.toString());
+            userRepository.save(user3);
+            User user4 = restTemplate.getForObject("https://api.github.com/users/GenzebNge", User.class);
+//        log.info(user.toString());
+            userRepository.save(user4);
+            User user5 = restTemplate.getForObject("https://api.github.com/users/hagaw", User.class);
+//        log.info(user.toString());
+            userRepository.save(user5);
+            User user6 = restTemplate.getForObject("https://api.github.com/users/hoysum", User.class);
+//        log.info(user.toString());
+            userRepository.save(user6);
+            User user7 = restTemplate.getForObject("https://api.github.com/users/Irinamiranda", User.class);
+//        log.info(user.toString());
+            userRepository.save(user7);
+            User user8 = restTemplate.getForObject("https://api.github.com/users/jhlahey2", User.class);
+//        log.info(user.toString());
+            userRepository.save(user8);
+            User user9 = restTemplate.getForObject("https://api.github.com/users/martyheyn", User.class);
+//        log.info(user.toString());
+            userRepository.save(user9);
+            User user10 = restTemplate.getForObject("https://api.github.com/users/MelakMinlargilih", User.class);
+//        log.info(user.toString());
+            userRepository.save(user10);
+            User user11 = restTemplate.getForObject("https://api.github.com/users/navjotkaur4", User.class);
+//        log.info(user.toString());
+            userRepository.save(user11);
+            User user12 = restTemplate.getForObject("https://api.github.com/users/seblechernet", User.class);
+//        log.info(user.toString());
+            userRepository.save(user12);
+            User user13 = restTemplate.getForObject("https://api.github.com/users/ShristiA", User.class);
+//        log.info(user.toString());
+            userRepository.save(user13);
+            User user14 = restTemplate.getForObject("https://api.github.com/users/smewled2012", User.class);
+//        log.info(user.toString());
+            userRepository.save(user14);
+            User user15 = restTemplate.getForObject("https://api.github.com/users/swilliam01", User.class);
+//        log.info(user.toString());
+            userRepository.save(user15);
+            User user16 = restTemplate.getForObject("https://api.github.com/users/swimmerlap", User.class);
+//        log.info(user.toString());
+            userRepository.save(user16);
+            User user17 = restTemplate.getForObject("https://api.github.com/users/zemenuyar", User.class);
+//        log.info(user.toString());
+            userRepository.save(user17);
+        };
+
 ////            ResponseEntity<List<User>> memberResponse =
 ////                    restTemplate.exchange("https://api.github.com/orgs/github/members",
 ////                            HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {

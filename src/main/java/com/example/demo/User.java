@@ -33,6 +33,18 @@ public class User {
         //this.repos_url = repos_url;
     }
 
+
+    @Override
+    public String toString(){
+        return "User{id =  "+id+
+                ",   Username  = "+login+
+                ",   following  = "+following+
+                ",   followers  = " +followers+
+                /*"following:" +following_url+
+                "pulls_url" +repos_url+*/"}\n";
+//
+    }
+
     public long getId() {
         return id;
     }
@@ -49,55 +61,19 @@ public class User {
         this.login = login;
     }
 
-
-
-//    public ArrayList<Repos> getRepos_url() {
-//        return repos_url;
-//    }
-//
-//    public void setRepos_url(ArrayList<Repos> repos_url) {
-//        this.repos_url = repos_url;
-//    }
-
-//    public ArrayList<String> getFollowing_url() {
-//        return following_url;
-//    }
-//
-//    public void setFollowing_url(ArrayList<String> following_url) {
-//        this.following_url = following_url;
-//    }
-//
-//    public ArrayList<String> getFollowers_url() {
-//        return followers_url;
-//    }
-//
-//    public void setFollowers_url(ArrayList<String> followers_url) {
-//        this.followers_url = followers_url;
-//    }
-
-
-
     public String getFollowing() {
-        return followers;
+        return following;
     }
+
     public void setFollowing(String following) {
         this.following = following;
     }
-    public void setFollowers(String followers) {
-        this.followers = followers;
-    }
+
     public String getFollowers() {
         return followers;
     }
 
-    @Override
-    public String toString(){
-        return "User{id =  "+id+
-                ",   Username  = "+login+
-                ",   following  = "+following+
-                ",   followers  = " +followers+
-                /*"following:" +following_url+
-                "pulls_url" +repos_url+*/"}\n";
-//
+    public void setFollowers(String followers) {
+        this.followers = followers;
     }
 }
