@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,19 +23,27 @@ public class FinalProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(FinalProjectApplication.class, args);
     }
+    @Autowired
+    UserRepository userRepository;
 
-//    @Bean
-//    public RestTemplate restTemplate(RestTemplateBuilder builder) {
-//        return builder.build();
-//    }
-//
-//    @Bean
-//    public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-//        return args -> {
-//
-//
+    @Autowired
+    ReposRepository reposRepository;
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
+
+    @Bean
+    public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
+        return args -> {
+
+
 //            User user = restTemplate.getForObject("https://api.github.com/users/MelakMinlargilih", User.class);
 //            log.info(user.toString());
+//            userRepository.save(user);};
+        User user1 = restTemplate.getForObject("https://api.github.com/users/Ermiji", User.class);
+        log.info(user1.toString());
+        userRepository.save(user1);};
 //            log.info("----------------------------------------------------");
 //
 ////            ResponseEntity<List<User>> memberResponse =
@@ -79,5 +88,5 @@ public class FinalProjectApplication {
 //        //pulls
 //        //GET /repos/:owner/:repo/pulls
 //
-//    }
+  }
 }

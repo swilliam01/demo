@@ -2,19 +2,8 @@ package com.example.demo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.validation.Valid;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Map;
 
 @Controller
 public class MainController {
@@ -33,24 +22,23 @@ public class MainController {
         @RequestMapping("/")
         public String Home(Model model) {
             model.addAttribute("users",userRepository.findAll());
-//
+//user's count
             return "homepage";
         }
 
-
-        @GetMapping("/addRepos")
-        public String reposForm(Model model) {
-            model.addAttribute("repos", new Repos());
-            return "reposform";
-        }
-
-        @PostMapping("/addRepos")
-        public String processForm(@ModelAttribute("repos") Repos repos){
-
-
-            reposRepository.save(repos);
-            return "redirect:/";
-        }
+//        @GetMapping("/addRepos")
+//        public String reposForm(Model model) {
+//            model.addAttribute("repos", new Repos());
+//            return "reposform";
+//        }
+//
+//        @PostMapping("/addRepos")
+//        public String processForm(@ModelAttribute("repos") Repos repos){
+//
+//
+//            reposRepository.save(repos);
+//            return "redirect:/";
+//        }
 
 //        @RequestMapping("/detail/{id}")
 //        public String showMessage(@PathVariable("id") long id, Model model){

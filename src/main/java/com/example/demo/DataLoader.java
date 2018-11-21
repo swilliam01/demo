@@ -2,7 +2,6 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import sun.plugin2.message.Message;
 
@@ -10,7 +9,7 @@ import javax.management.relation.Role;
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.crypto.password.PasswordEncoder;
+
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Executable;
@@ -35,13 +34,13 @@ import java.util.Arrays;
 
            // if (rundataloader){
 
-                User user = new User("MelakMinlargilih","2","2");
-                //user.setRepos_url(Arrays.asList(userRepos1));
-                userRepository.save(user);
-
-                Repos repos = new Repos("Week9ChallengebetterBullhornMessagingApp","MelakMinlargilih/Week9ChallengebetterBullhornMessagingApp","JAVA","1","0"/*,"MelakMinlargilih"*/);
-                //Repos.setOwner(user);
-                reposRepository.save(repos);
+//                User user = new User("MelakMinlargilih","2","2");
+//                //user.setRepos_url(Arrays.asList(userRepos1));
+//                userRepository.save(user);
+//
+//                Repos repos = new Repos("Week9ChallengebetterBullhornMessagingApp","MelakMinlargilih/Week9ChallengebetterBullhornMessagingApp","JAVA","1","0"/*,"MelakMinlargilih"*/);
+//                //Repos.setOwner(user);
+//                reposRepository.save(repos);
 
             //}
         }

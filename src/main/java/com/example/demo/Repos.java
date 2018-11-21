@@ -21,11 +21,11 @@ public class Repos {
    //Repository traffic (unique visitors and unique cloners)
 
 //   @ManyToMany
-<<<<<<< HEAD
-//  private User Owner;
-=======
-//   private User Owner;
->>>>>>> origin/master
+//<<<<<<< HEAD
+////  private User Owner;
+//=======
+////   private User Owner;
+//>>>>>>> origin/master
 
    public Repos() {
    }
