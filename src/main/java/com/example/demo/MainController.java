@@ -20,13 +20,18 @@ public class MainController {
 
 
         @RequestMapping("/")
-        public String Home(Model model /*,String login*/) {
-            model.addAttribute("users",userRepository.findAll());
-            //model.addAttribute("counter",userRepository.countByLogin(login));
+    public String Home(Model model /*,String login*/) {
+        model.addAttribute("users",userRepository.findAll());
+        //model.addAttribute("counter",userRepository.countByLogin(login));
 //user's count
-            return "homepage";
-        }
-
+        return "homepage";
+    }
+    @RequestMapping("/userDetail")
+    public String showDetail(@PathVariable("id") long id, Model model) {
+        model.addAttribute("user",userRepository.findById(id));
+//user's count
+        return "userpage";
+    }
 //        @GetMapping("/addRepos")
 //        public String reposForm(Model model) {
 //            model.addAttribute("repos", new Repos());

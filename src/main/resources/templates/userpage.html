@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"><head>
+<meta charset="UTF-8"/>
+<title>Title</title>
+<!--<th:block th:insert="base :: header"></th:block>-->
+</head>
+<body>
+<!--<div th:replace="base :: nav"></div>-->
+
+<div class="my-5"></div>
+
+<h1 class="text-center text-white">Welcome to Our App!</h1>
+<div class="my-5"></div>
+<div class="container bg-light-transparent">
+<div class="my-4 "></div>
+
+
+<div class="my-4" align="center">
+<h2 class="text-center py-3 pl-4 pr-5">List of members</h2>
+<table>
+<!--<h2>Insecure Page</h2>-->
+<!--<a href="/secure">Secure Page</a>-->
+<tr class="text-dark">
+    <th class="pr-3">User Name</th>
+    <th class="pr-3">Followers</th>
+    <th class="pr-3">Following</th>
+</tr>
+<tr class="text-dark">
+    <td th:text="${user.login}"></td>
+    <td th:text="${user.followers}"></td>
+    <td th:text="${user.following}"></td>
+</tr>
+</table>
+<br/>
+
+<div class="pb-5"></div>
+</div>
+</div>
+
+<!--<div class="emptySpace"></div>-->
+<!--<div th:replace="base :: footer"></div>-->
+</body>
+</html>

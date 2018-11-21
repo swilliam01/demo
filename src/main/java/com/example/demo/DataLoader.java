@@ -34,9 +34,9 @@ import java.util.Arrays;
 
            // if (rundataloader){
 
-//                User user = new User("MelakMinlargilih","2","2");
-//                //user.setRepos_url(Arrays.asList(userRepos1));
-//                userRepository.save(user);
+                User user = new User("MelakMinlargilih","2","2");
+                //user.setRepos_url(Arrays.asList(userRepos1));
+                userRepository.save(user);
 //
 //                Repos repos = new Repos("Week9ChallengebetterBullhornMessagingApp","MelakMinlargilih/Week9ChallengebetterBullhornMessagingApp","JAVA","1","0"/*,"MelakMinlargilih"*/);
 //                //Repos.setOwner(user);
