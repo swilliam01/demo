@@ -28,9 +28,13 @@
 
     <ul class="nav">
         <li><h3>Members List <span class="w3-badge w3-small w3-gray w3-padding">17</span></h3></li>
+        <li><h3>&nbsp;&nbsp;&nbsp;Followers </h3></li>
+        <li><h3>&nbsp;&nbsp;&nbsp;Following </h3></li>
     </ul><br>
         <ul th:each="user : ${users}">
-            <a th:href="@{/userDetail}">[[${user.login}]]</a>
+            <a th:href="@{/userDetail/{login}}">[[${user.login}]]</a>
+            <a th:href="@{/userDetail}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[${user.following}]]</a>
+            <a th:href="@{/userDetail}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[${user.followers}]]</a>
             <!--(id={user.id})}" >[[${user.login}]]</a>-->
         </ul>
         <!--&lt;!&ndash;<li><a href="#">Member 1</a></li>&ndash;&gt;-->

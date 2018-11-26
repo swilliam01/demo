@@ -26,25 +26,25 @@ public class MainController {
 //user's count
         return "homepage";
     }
-    @RequestMapping("/userDetail")
-    public String showDetail(@PathVariable("id") long id, Model model) {
-        model.addAttribute("user",userRepository.findById(id));
+    @RequestMapping("/userDetail/{login}")
+    public String showDetail(@PathVariable("login") String login, Model model) {
+        model.addAttribute("user",userRepository.findByLogin(login));
 //user's count
         return "userpage";
     }
-//        @GetMapping("/addRepos")
-//        public String reposForm(Model model) {
-//            model.addAttribute("repos", new Repos());
-//            return "reposform";
-//        }
-//
-//        @PostMapping("/addRepos")
-//        public String processForm(@ModelAttribute("repos") Repos repos){
-//
-//
-//            reposRepository.save(repos);
-//            return "redirect:/";
-//        }
+        @GetMapping("/addRepos")
+        public String reposForm(Model model) {
+            model.addAttribute("repos", new Repos());
+            return "reposform";
+        }
+
+        @PostMapping("/addRepos")
+        public String processForm(@ModelAttribute("repos") Repos repos){
+
+
+            reposRepository.save(repos);
+            return "redirect:/";
+        }
 
 //        @RequestMapping("/detail/{id}")
 //        public String showMessage(@PathVariable("id") long id, Model model){

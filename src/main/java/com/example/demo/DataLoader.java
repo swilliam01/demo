@@ -27,17 +27,18 @@ import java.util.Arrays;
         public void run(String... strings) throws Exception{
 
 
-           // boolean rundataloader= false;
-//            Repos userRepos= reposRepository.findByOwner("MelakMinlargilih");
-//            Repos userRepos1= reposRepository.findByName("Week9ChallengebetterBullhornMessagingApp");
+            boolean rundataloader= false;
+            Repos userRepos= reposRepository.findByName("MelakMinlargilih");
+            Repos userRepos1= reposRepository.findByName("Week9ChallengebetterBullhornMessagingApp");
 
 
            // if (rundataloader){
 
                 User user = new User("MelakMinlargilih","2","2");
-                //user.setRepos_url(Arrays.asList(userRepos1));
+//                user.setRepos_url(Arrays.asList(userRepos1));
                 userRepository.save(user);
-//
+                User user1 = new User("Ermiji","2","2");
+              userRepository.save(user1);
 //                Repos repos = new Repos("Week9ChallengebetterBullhornMessagingApp","MelakMinlargilih/Week9ChallengebetterBullhornMessagingApp","JAVA","1","0"/*,"MelakMinlargilih"*/);
 //                //Repos.setOwner(user);
 //                reposRepository.save(repos);
